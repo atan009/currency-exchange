@@ -8,14 +8,14 @@
 }
 
 .row {
-	
+	margin-left: 0;
+	margin-right: 0;
 }
 
 .nav-bar {
-	margin-left: 0;
 	height: 55px;
 	width: 100vw;
-	background-color: black;
+	background-color: #015b9d;
 	display: flex;
 	align-items: center;
 	z-index: -1;
@@ -32,14 +32,21 @@
 			    -webkit-transition: all .3s ease-in;
 			    transition: all .3s ease-in;
 				&:hover {
-					color: #006fc3;
+					color: #71c4ff;
 				}
 			}
 		}
 	}
 }
 
-.exchange-rate {
-	
-	// z-index: 1;
+.currency-conversion {
+	background-color: #f8f8f8;
+	h2 {
+		color: #002272;
+	}
+
+	input {
+		width: 50%;
+	}
 }
+

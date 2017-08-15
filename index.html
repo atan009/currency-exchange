@@ -10,12 +10,46 @@
 </head>
 <body>
 	<div class="container">
+		<!-- Nav Bar -->
 		<div class="row nav-bar">
 			<div class="col-md-1 oxr-api-attrib nav-item">
 				<a href="https://openexchangerates.org/"><img src="imgs/logo-oxr-api.png"></a>
 			</div>
 			<div class="col-md-1 exchange-rate nav-item">
 				<a href=""><p>Exchange Rates</p></a>
+			</div>
+		</div>
+
+		<div class="row currency-conversion">
+			<div class="col-md-1">
+			</div>
+			<div class="col-md-6">
+				<h2>Currency Conversion: INPUT &#8594 OUTPUT</h2>
+				<div>
+					<pre><input type="number" name="amount" value="0.00" placeholder="amount"> Conversion amount: </pre>
+				</div>
+				<div>
+					<pre><input type="text" list="from-currencies" placeholder="From This Currency" /> Currency you wish to convert from </pre>
+					<datalist id="from-currencies">
+					    <option>USD</option>
+					    <option>Pesos</option>
+					    <option>RMB</option>
+					    <option>Yen</option>
+					</datalist>
+				</div>
+
+				<div>
+					<pre><input type="text" list="to-currencies" placeholder="To This Currency" /> Currency you wish to convert to </pre>
+					<datalist id="to-currencies">
+					    <option>USD</option>
+					    <option>Pesos</option>
+					    <option>RMB</option>
+					    <option>Yen</option>
+					</datalist>
+				</div>
+			</div>
+			<div class="col-md-4">
+				FILLER
 			</div>
 		</div>
 	</div>

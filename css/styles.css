@@ -6,11 +6,14 @@
   margin-left: 0;
   display: inline-block; }
 
-.nav-bar {
+.row {
   margin-left: 0;
+  margin-right: 0; }
+
+.nav-bar {
   height: 55px;
   width: 100vw;
-  background-color: black;
+  background-color: #015b9d;
   display: flex;
   align-items: center;
   z-index: -1; }
@@ -27,6 +30,13 @@
         -webkit-transition: all .3s ease-in;
         transition: all .3s ease-in; }
         .nav-bar .nav-item a p:hover {
-          color: #006fc3; }
+          color: #71c4ff; }
+
+.currency-conversion {
+  background-color: #f8f8f8; }
+  .currency-conversion h2 {
+    color: #002272; }
+  .currency-conversion input {
+    width: 50%; }
 
 /*# sourceMappingURL=styles.css.map */
