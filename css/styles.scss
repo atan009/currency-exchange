@@ -39,14 +39,50 @@
 	}
 }
 
+
 .currency-conversion {
 	background-color: #f8f8f8;
 	h2 {
 		color: #002272;
+		float: left;
 	}
 
 	input {
 		width: 50%;
 	}
+
+	button {
+		margin-top: 20px;
+		margin-left: 2.25%;
+		padding-top: 5px;
+		padding-bottom: 5px;
+		length: 33px;
+	}
+
+	pre {
+		width: 100%;
+	}
+
+	.conversion {
+		#convert-list {
+		width: 50%;
+		}
+
+		.select2-container {
+			// padding-bottom: 10px !important;
+			float: left;
+		}
+
+		p {
+			margin-left: 51%;
+			padding-top: 0.5%;
+		}
+
+		pre {
+			
+		}
+	}
+
+	
 }
 

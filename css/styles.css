@@ -35,8 +35,24 @@
 .currency-conversion {
   background-color: #f8f8f8; }
   .currency-conversion h2 {
-    color: #002272; }
+    color: #002272;
+    float: left; }
   .currency-conversion input {
     width: 50%; }
+  .currency-conversion button {
+    margin-top: 20px;
+    margin-left: 2.25%;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    length: 33px; }
+  .currency-conversion pre {
+    width: 100%; }
+  .currency-conversion .conversion #convert-list {
+    width: 50%; }
+  .currency-conversion .conversion .select2-container {
+    float: left; }
+  .currency-conversion .conversion p {
+    margin-left: 51%;
+    padding-top: 0.5%; }
 
 /*# sourceMappingURL=styles.css.map */

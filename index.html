@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" ng-app="currencyApp">
 <head>
 	<title>Currency Exchange Rates</title>
 	<meta charset="utf-8">
@@ -7,13 +7,18 @@
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/styles.css" rel="stylesheet">
 	<script src="js/jQuery.js"></script>
+	<script src="js/angular.min.js"></script>
+	<script src="https://code.jquery.com/jquery-2.1.1.min.js" type="text/javascript"></script>
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.1/css/select2.min.css" rel="stylesheet" />
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.1/js/select2.min.js"></script>
+	<script src="js/app.js"></script>
 </head>
 <body>
 	<div class="container">
 		<!-- Nav Bar -->
 		<div class="row nav-bar">
 			<div class="col-md-1 oxr-api-attrib nav-item">
-				<a href="https://openexchangerates.org/"><img src="imgs/logo-oxr-api.png"></a>
+				<a href="https://1forge.com/forex-data-api">ATTRIBUTION TO FORGE</a>
 			</div>
 			<div class="col-md-1 exchange-rate nav-item">
 				<a href=""><p>Exchange Rates</p></a>
@@ -25,28 +30,20 @@
 			</div>
 			<div class="col-md-6">
 				<h2>Currency Conversion: INPUT &#8594 OUTPUT</h2>
+				<button>Convert</button>
 				<div>
-					<pre><input type="number" name="amount" value="0.00" placeholder="amount"> Conversion amount: </pre>
+					<pre><input type="number" name="amount" value="0.00" placeholder="amount"> Conversion amount:</pre>
 				</div>
-				<div>
-					<pre><input type="text" list="from-currencies" placeholder="From This Currency" /> Currency you wish to convert from </pre>
-					<datalist id="from-currencies">
-					    <option>USD</option>
-					    <option>Pesos</option>
-					    <option>RMB</option>
-					    <option>Yen</option>
-					</datalist>
+				<div class="conversion" ng-controller="OptionController as options">
+					<pre>
+						<select id="convert-list">
+						<!-- Dropdown List Option -->
+							<option ng-repeat="option in listOptions" value="{{option}}">{{option}}</option>
+						</select> <p>Currency you wish to convert from </p>
+						</pre>
 				</div>
 
-				<div>
-					<pre><input type="text" list="to-currencies" placeholder="To This Currency" /> Currency you wish to convert to </pre>
-					<datalist id="to-currencies">
-					    <option>USD</option>
-					    <option>Pesos</option>
-					    <option>RMB</option>
-					    <option>Yen</option>
-					</datalist>
-				</div>
+
 			</div>
 			<div class="col-md-4">
 				FILLER
