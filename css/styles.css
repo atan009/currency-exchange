@@ -47,12 +47,19 @@
     length: 33px; }
   .currency-conversion pre {
     width: 100%; }
-  .currency-conversion .conversion #convert-list {
-    width: 50%; }
-  .currency-conversion .conversion .select2-container {
-    float: left; }
-  .currency-conversion .conversion p {
-    margin-left: 51%;
-    padding-top: 0.5%; }
+  .currency-conversion .conversion {
+    border: solid 1px;
+    border-radius: 5px;
+    border-color: #ccc; }
+    .currency-conversion .conversion #convert-list {
+      width: 50%; }
+    .currency-conversion .conversion .select2-container {
+      padding-left: 2%;
+      margin-top: 1.5%;
+      float: left; }
+    .currency-conversion .conversion p {
+      margin-left: 51%;
+      margin-bottom: 2.5%;
+      padding-top: 2%; }
 
 /*# sourceMappingURL=styles.css.map */

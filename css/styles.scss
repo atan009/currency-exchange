@@ -64,22 +64,28 @@
 	}
 
 	.conversion {
+		border: solid 1px;
+		border-radius: 5px;
+		border-color: #ccc;
+
 		#convert-list {
 		width: 50%;
 		}
 
 		.select2-container {
-			// padding-bottom: 10px !important;
+			padding-left: 2%;
+			margin-top: 1.5%;
 			float: left;
 		}
 
 		p {
 			margin-left: 51%;
-			padding-top: 0.5%;
+			margin-bottom: 2.5%;
+			padding-top: 2%;
 		}
 
 		pre {
-			
+
 		}
 	}
 
