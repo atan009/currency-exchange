@@ -24,31 +24,28 @@
 				<a href=""><p>Exchange Rates</p></a>
 			</div>
 		</div>
-
 		<div class="row currency-conversion">
 			<div class="col-md-1">
 			</div>
 			<div class="col-md-6">
-				<h2>Currency Conversion: INPUT &#8594 OUTPUT</h2>
+				<h2>Currency Conversion: IN &#8594 OUT</h2>
 				<button>Convert</button>
 				<div class="convert-box">
 					<input class="convert-amount" type="number" name="amount" value="0.00" placeholder="amount"> 
 					<p>Conversion amount:</p>
 				</div>
 				<div class="conversion" ng-controller="OptionController as options">
-					
 					<select id="convert-list">
 					<!-- Dropdown List Option -->
 						<option ng-repeat="option in listOptions" value="{{option}}">{{option}}</option>
 					</select> 
-					<p>Currency you wish to convert from </p>
-						
+					<p>Currency you wish to convert from </p>	
 				</div>
-
-
 			</div>
 			<div class="col-md-4">
-				FILLER
+				<div class="entered-currency">
+					<h2>Calculations</h2>
+				</div>
 			</div>
 		</div>
 	</div>

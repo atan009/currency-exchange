@@ -15,11 +15,11 @@
 		// 	alert("Could not request url");
 		// });
 		// console.log(self.listOptions);
-		$scope.listOptions = ["1", "2", "3"];
+		// $scope.listOptions = ["1", "2", "3"];
 	});
-	console.log("test");
 
    $(document).ready(function() {
+   		// converts list into select2 style list
 		$("#convert-list").select2({});
 	});
 
