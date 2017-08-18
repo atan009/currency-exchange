@@ -31,15 +31,17 @@
 			<div class="col-md-6">
 				<h2>Currency Conversion: INPUT &#8594 OUTPUT</h2>
 				<button>Convert</button>
-				<div>
-					<pre><input type="number" name="amount" value="0.00" placeholder="amount"> Conversion amount:</pre>
+				<div class="convert-box">
+					<input class="convert-amount" type="number" name="amount" value="0.00" placeholder="amount"> 
+					<p>Conversion amount:</p>
 				</div>
 				<div class="conversion" ng-controller="OptionController as options">
 					
-						<select id="convert-list">
-						<!-- Dropdown List Option -->
-							<option ng-repeat="option in listOptions" value="{{option}}">{{option}}</option>
-						</select> <p>Currency you wish to convert from </p>
+					<select id="convert-list">
+					<!-- Dropdown List Option -->
+						<option ng-repeat="option in listOptions" value="{{option}}">{{option}}</option>
+					</select> 
+					<p>Currency you wish to convert from </p>
 						
 				</div>
 

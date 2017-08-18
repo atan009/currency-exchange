@@ -59,8 +59,25 @@
 		length: 33px;
 	}
 
-	pre {
-		width: 100%;
+	.convert-box {
+		border: solid 1px;
+		border-radius: 5px;
+		border-color: #ccc;
+
+
+		.convert-amount {
+			margin-left: 2%;
+			margin-top: 0.5%;
+			float: left;
+			width: 85px;
+		}
+
+		p {
+			margin-left: 17%;
+			margin-bottom: 2.5%;
+			padding-top: 2%;
+			width: 75%;
+		}
 	}
 
 	.conversion {
@@ -69,26 +86,26 @@
 		border-color: #ccc;
 
 		#convert-list {
-		width: 50%;
+		width: 98px;
 		}
 
 		.select2-container {
 			padding-left: 2%;
 			margin-top: 1.5%;
 			float: left;
+
 		}
 
 		p {
-			margin-left: 51%;
+			margin-left: 17%;
 			margin-bottom: 2.5%;
 			padding-top: 2%;
 		}
-
-		pre {
-
-		}
 	}
-
-	
 }
 
+.select2-dropdown {
+	margin-left: 2% !important;
+	left: 13.016px !important;
+	width: 85px !important;
+}
