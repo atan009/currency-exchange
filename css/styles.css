@@ -34,7 +34,7 @@
 
 .currency-conversion {
   background-color: #f8f8f8; }
-  .currency-conversion h2 {
+  .currency-conversion .col-md-6 h2 {
     color: #002272;
     float: left; }
   .currency-conversion input {
@@ -49,21 +49,24 @@
   .currency-conversion .convert-box {
     border: solid 1px;
     border-radius: 5px;
-    border-color: #ccc; }
+    border-color: #ccc;
+    width: 80%; }
     .currency-conversion .convert-box .convert-amount {
       margin-left: 2%;
       margin-top: 1.5%;
       float: left;
       width: 85px; }
     .currency-conversion .convert-box p {
-      margin-left: 17%;
+      margin-left: 20%;
       margin-bottom: 2.5%;
       padding-top: 2%;
       width: 75%; }
   .currency-conversion .conversion {
+    margin-top: 20px;
     border: solid 1px;
     border-radius: 5px;
-    border-color: #ccc; }
+    border-color: #ccc;
+    width: 80%; }
     .currency-conversion .conversion #convert-list {
       width: 98px; }
     .currency-conversion .conversion .select2-container {
@@ -71,9 +74,14 @@
       margin-top: 1.5%;
       float: left; }
     .currency-conversion .conversion p {
-      margin-left: 17%;
+      margin-left: 20%;
       margin-bottom: 2.5%;
       padding-top: 2%; }
+  .currency-conversion .col-md-4 h2 {
+    color: #002272;
+    margin-bottom: 20px; }
+  .currency-conversion .entered-currency h3 {
+    padding-top: 10px; }
 
 .select2-dropdown {
   margin-left: 2% !important;

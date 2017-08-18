@@ -24,15 +24,15 @@
 				<a href=""><p>Exchange Rates</p></a>
 			</div>
 		</div>
-		<div class="row currency-conversion">
+		<div class="row currency-conversion" ng-controller="ConversionController as CC">
 			<div class="col-md-1">
 			</div>
 			<div class="col-md-6">
 				<h2>Currency Conversion: IN &#8594 OUT</h2>
-				<button>Convert</button>
+				<button ng-click="CC.convertFunction()">Convert</button>
 				<div class="convert-box">
 					<input class="convert-amount" type="number" name="amount" value="0.00" placeholder="amount"> 
-					<p>Conversion amount:</p>
+					<p>Conversion amount</p>
 				</div>
 				<div class="conversion" ng-controller="OptionController as options">
 					<select id="convert-list">
@@ -43,8 +43,14 @@
 				</div>
 			</div>
 			<div class="col-md-4">
-				<div class="entered-currency">
+				<div>
 					<h2>Calculations</h2>
+				</div>
+				<div class="entered-currency">
+					<h3>Amount - FromCurrencyType</h3>
+					<h3>NewCurrenyType</h3>
+					<h3>Currency Rate</h3>
+					<h3>Amount - ToCurrencyType</h3>
 				</div>
 			</div>
 		</div>
