@@ -7,6 +7,10 @@
 	var symbolsURL = "https://forex.1forge.com/1.0.2/symbols?api_key=" + api_key;
 	var pairURL = "https://forex.1forge.com/1.0.2/quotes?pairs=";
 
+	var timeAcquired = new Date(1503343478 * 1000);
+	var mmddyyyy = (timeAcquired.getMonth()+1) + '-' + timeAcquired.getDate() + '-' + timeAcquired.getFullYear();
+	var hhmmss = timeAcquired.getHours() + ':' + timeAcquired.getMinutes() +':' + timeAcquired.getSeconds();
+
 	//controller for making filtered list
 	app.controller('OptionController', function($scope){
 
@@ -50,7 +54,11 @@
     		var currencyRate;
     		curPairURL = pairURL + selType + "&api_key=" + api_key;
     		$.getJSON(curPairURL, function(data) {
-    			$(".cr").html(data[0].price);
+    			timeAcquired = new Date(data[0].timestamp * 1000);
+    			mmddyyyy = (timeAcquired.getMonth()+1) + '-' + timeAcquired.getDate() + '-' + timeAcquired.getFullYear();
+				hhmmss = timeAcquired.getHours() + ':' + timeAcquired.getMinutes() +':' + timeAcquired.getSeconds();
+
+    			$(".cr").html(data[0].price + ' @ ' + mmddyyyy + ' ' + hhmmss);
     			currencyRate = data[0].price;
     			$(".finalAmt").html((amt * currencyRate) + " - " + toType);
     		}).error(function(e) {
