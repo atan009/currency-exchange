@@ -1,21 +1,24 @@
 (function() {
+	//Exchange Rates Page module
 	var app = angular.module('currencyApp', []);
 
+	//api for symbols and rates
 	var api_key = "VWnVzzZ2btJt9AebwTtvHaUhJ7kHSDr8";
-	var url = "https://forex.1forge.com/1.0.2/symbols?api_key=" + api_key;
+	var symbolsURL = "https://forex.1forge.com/1.0.2/symbols?api_key=" + api_key;
+	var pairURL = "https://forex.1forge.com/1.0.2/quotes?pairs=";
 
+	//controller for making filtered list
 	app.controller('OptionController', function($scope){
 
-		// $.getJSON(url, function(data) {
-		// 	$scope.$apply(function(){
-		// 		$scope.listOptions = data;
-		// 		$scope.listOptions.sort();
-		// 	});
-		// }).error(function(e) {
-		// 	alert("Could not request url");
-		// });
-		// console.log(self.listOptions);
-		$scope.listOptions = ["USDEUR", "2", "3"];
+		//gets information
+		$.getJSON(symbolsURL, function(data) {
+			$scope.$apply(function(){
+				$scope.listOptions = data;
+				$scope.listOptions.sort();
+			});
+		}).error(function(e) {
+			alert("Could not request symbolsURL");
+		});
 	});
 
     $(document).ready(function() {
@@ -23,15 +26,36 @@
 		$("#convert-list").select2({});
 	});
 
-    app.controller('ConversionController', function(){
+    //main conversion controller
+    app.controller('ConversionController', function($scope){
+    	//most of this just sets things to corresponding values
+    	$scope.fromType = "IN";
+    	$scope.toType = "OUT";
+    	$scope.amt = "Amount";
+    	$scope.fromCurrencyType = "FromCurrencyType";
+    	$scope.newCurrencyType = "NewCurrencyType";
     	this.convertFunction = function() {
-    		var amt = $(".convert-amount").val();
     		var selType = "" + $(".select2-selection__rendered").html();
     		var fromType = selType.slice(0,3);
+    		$scope.fromType = fromType;
     		var toType = selType.slice(3,6);
+    		$scope.toType = toType;
 
-    		$(".col-md-6 h2").html("Currency Conversion: " + fromType + " &#8594 " + toType);
-    		console.log($(".col-md-6 h2").html());
+    		var amt = $(".convert-amount").val();
+    		$scope.amt = amt;
+    		$scope.fromCurrencyType = fromType;
+    		$scope.newCurrencyType = toType;
+
+    		//does the remaining conversion and changes values
+    		var currencyRate;
+    		curPairURL = pairURL + selType + "&api_key=" + api_key;
+    		$.getJSON(curPairURL, function(data) {
+    			$(".cr").html(data[0].price);
+    			currencyRate = data[0].price;
+    			$(".finalAmt").html((amt * currencyRate) + " - " + toType);
+    		}).error(function(e) {
+		 		alert("Could not request symbolsURL");
+		 	});
     	}
     });
 })();
