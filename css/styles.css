@@ -18,7 +18,7 @@
   align-items: center;
   z-index: -1; }
   .nav-bar .nav-item {
-    padding-left: 0 !important;
+    padding-right: 0 !important;
     text-decoration: none; }
     .nav-bar .nav-item a {
       text-decoration: none !important; }
