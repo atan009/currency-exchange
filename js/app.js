@@ -11,6 +11,19 @@
 	var mmddyyyy = (timeAcquired.getMonth()+1) + '-' + timeAcquired.getDate() + '-' + timeAcquired.getFullYear();
 	var hhmmss = timeAcquired.getHours() + ':' + timeAcquired.getMinutes() +':' + timeAcquired.getSeconds();
 
+	//controller for tabs
+	app.controller('TabController', function($scope) {
+		$scope.tab = 1;
+
+		$scope.setTab = function(newTab) {
+			$scope.tab = newTab;
+		};
+
+		$scope.isSet = function(tabNum) {
+			return $scope.tab === tabNum;
+		};
+	});
+
 	//controller for making filtered list
 	app.controller('OptionController', function($scope){
 
@@ -28,6 +41,8 @@
     $(document).ready(function() {
    		// converts list into select2 style list
 		$("#convert-list").select2({});
+		document.getElementById("select2-convert-list-container").title = 'AUDCAD';
+		$("#select2-convert-list-container").html('AUDCAD');
 	});
 
     //main conversion controller
